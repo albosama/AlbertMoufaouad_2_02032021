@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body
+{
+    font-family: 'Raleway', Arial, sans-serif;
+    margin:0 auto;
+    max-width: 1400px;
+}
+#bloc_page
+{
+    margin: auto;
+}
+header
+{
+    font-size: 0.5em;
+    display: flex;
+    justify-content: space-between;
+} 
+#titre_principal
+{
+    margin-left: 10px;
+}
+#titre_principal h1
+{
+    padding-top: 25px;
+    font-size: 3em;
+}
+#titre_principal h2
+{
+    font-size: 2em;
+}
+#logo img
+{
+    max-width: 120px;
+    margin-top: 25px;
+}
+.menu_navigation ul
+{
+    font-size: 1.1rem;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.menu_navigation li
+{
+    list-style-type: none;
+    margin-right: 50px;
+    height: 100px;
+    border-top: 3px solid transparent;
+    color: black;
+}
+.menu_navigation li:hover
+{
+    border-color: #0065FC;
+}
+.menu_navigation a:hover
+{
+    color: #0065FC;
+}
+.menu_navigation a
+{
+    text-decoration: none;
+    display: flex; /*permet de redimensionner le lien(un lien est type in-line) en faisant un display flex on le transforme en type bloc ce qui autorise le redimensionnement*/
+    height: 100%;
+    align-items: center;
+}
+.menu_navigation .register
+{
+    color: #0065FC;
+    font-weight: bold;
+}
+.icone_cote_gauche
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    border-radius: 5px;
+}
+.fas.fa-map-marker-alt /*pour changer les parametres de l'icone position*/ 
+{
+    height: 40px;
+    width: 40px;
+    background: url(images/fond_gris_ciel.png) repeat-x;
+    /* padding: 10px; */
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton_rechercher a
+{
+    text-decoration: none;
+}
+.bouton_rechercher p/*personnalisation du bouton rechercher*/
+{
+    font-size: 15px;
+    width: 125px;
+    background: url(images/fond_bleu.png) repeat-x;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 3px;
+    margin: 0;
+    border-radius: 0px 10px 10px 0px ;  
+}
+input[type="search"] /*pour changr les parametres de la barre de recherche*/
+{
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 8px;
+}
+.fas.fa-search
+{
+    display: none;
+}
+.filtres 
+{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.icone_filtres
+{
+    border-radius: 2px solid blue;
+}
+
+.filtres h3 
+{
+    height: 20px; /*pour changer la hauteur (de la marge)*/
+    font-size: 1.2rem;
+}
+.filtres ul
+{
+    list-style-type: none;
+    display: flex;
+    margin: 7px;
+}
+.filtres li
+{
+    margin-right: 20px;
+    display: flex;
+    /*padding-right: 10px; */
+    border: 2px solid #F2F2F2;
+    border-radius: 50px;
+}
+.fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
+{
+    font-size:1rem;
+    padding: 15px;
+    background: #DEEBFF;
+    border-radius: 50%;
+}
+.fa-color
+{
+    color: dodgerblue;
+}
+.fa-color2
+{
+    color: lightgrey;
+}
+nav li p
+{
+    font-size: 1.2rem;
+    margin: 0 10px;
+    padding: 10px;
+}
+li img
+{
+    margin: 0px 130px 10px 10px;
+    padding-right: 10px;
+    height: 20px;
+}
+#recherche_description
+{
+    margin-left: -60px; /*pour changer la marge à gauche de l'icone info*/
+    margin-top: 50px;
+}
+#recherche_description .fas.fa-info
+{
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+}
+.fas.fas.fa-info
+{
+    padding-bottom: 5px;
+}
+nav p
+{
+    margin-top: -20px;
+    font-size: 1rem;
+    margin-left: 40px;
+}
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+section h2
+{
+    font-family: "Raleway",serif,sans-serif;
+    font-weight:bold;
+}
+section a
+{
+    list-style-type: none;  
+}
+strong
+{
+    color: black;
+}
+article
+{
+    background: #F2F2F2 repeat;
+    border-radius: 20px;
+    margin-right: 50px;
+    padding: 10px 40px 10px 40px;
+    height: 575px;
+    width: 845px;
+}
+article h2 .details h3
+{
+    display: flex;
+    flex-direction: column;
+}
+#hebergements_marseille
+{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 40px;
+    width: 845px;
+}
+#hebergements_marseille figure
+{
+    width: 260px;
+    height: 178px;
+    margin: 0;
+}
+figure .vignette img
+{
+    max-width: 100%; /*pour que limage (reste centrer) ne depasse jamais la taille de son conteneur*/
+}
+figure .vignette
+{
+    width: 255px; /*pour changer la largeur de l'image*/ 
+    height: 115px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+	border: 4px solid white;
+}
+.vignette figcaption, .fas.fa-star
+{
+    margin: 0;
+    padding-top: 10px;
+}
+figure .vignette_auberge
+{
+    width: 255px;
+    height: 115px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+	border: 4px solid white;
+}
+.vignette_auberge img
+{
+    max-width: 100%;
+}
+figure figcaption  /*pour parametrer description de l'image*/
+{
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 0.9rem;
+    height: 70px;
+    width: 243px;
+    color: black;
+}
+figure a 
+{
+    text-decoration: none; /*pour modifier l'apparence du lien de l'image*/
+}
+figure /* pour parametrer l'affichage des image(espace entre les vignettes par ex:)*/
+{
+   display: inline-block; 
+}
+
+.details
+{
+    text-decoration: none;
+}
+.details h3
+{
+    margin: 0;
+    padding: 0;
+    width: 110px;
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif, serif;
+}
+
+aside
+{
+    background: #F2F2F2 repeat;
+    border-radius: 20px;
+    padding: 10px 40px;
+    width: 340px;
+    height: 576px;
+}
+aside h2 .icone_stats
+{
+    width: 20px;
+}
+.icone_stats
+{
+    position: relative;
+    top: 3px;
+    right: -100px;
+}
+#les_plus_populaires
+{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 500px;
+    justify-content: space-between;
+}
+#les_plus_populaires figure
+{
+    height: 150px;
+    margin: 0; 
+    width: 340px; 
+}
+#les_plus_populaires figcaption /*pour gerer les parametres de la description image*/
+{
+    top: -143px;
+    left: 140px;
+    border-radius: 0px 20px 20px 0px;
+    height: 133px;
+    width: 180px;
+    position: relative; /*pour que la description soit positionnée sur le coté de l'image*/
+    padding-top: 10px; 
+}
+
+figure .populaires_1
+{
+    width: 135px;
+    height: 135px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0px 0px 20px;
+	border: 4px solid white;
+}
+figure .populaires img
+{
+    max-width: 100%;
+}
+
+figure .populaires
+{
+    width: 135px;
+    height: 135px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0px 0px 20px;
+	border: 4px solid white;
+}
+figure .populaires_1 img
+{
+    max-height: 100%; 
+}
+#les_plus_populaires .populaires_1 .populaires strong
+{
+    display: flex;
+}
+#les_plus_populaires figure figcaption .fas.fa-star
+{
+    margin: 0;
+    padding-top: 55px;
+}
+.fa-color3
+{
+    color: black;
+    font-style: 'Raleway' sans-serif serif;
+}
+#activité
+{
+    margin-top: 50px;
+    font-family: 'Raleway', serif, sans-serif;
+}
+#activités_à_marseille
+{
+    display: flex;
+}
+#activités_à_marseille figure
+{
+    margin: 0;
+    padding-right: 50px;
+}
+figure .activités_marseille
+{
+    width: 310px;
+    height:430px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 10px 0px 2px #F2F2F2;
+}
+figure .activités_marseille img
+{
+    max-height: 100%;
+}
+#activités_à_marseille .note_1
+{
+    /*padding-left: 10px;*/
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px; /*pour changer la largeur de la banniere description*/
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+}
+figure .le_fort
+{
+    width: 310px;
+    height:190px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 10px 0px 3px #F2F2F2;
+}
+figure .le_fort img
+{
+    max-width: 100%;
+}
+figure figcaption.descrip_fort
+{
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px;
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+}
+#activités_à_marseille figure.frioul
+{
+    position: relative;
+    left: -360px;
+    top: 290px;
+    height: 150px
+}
+figure .frioul
+{
+    width: 310px;
+    height:140px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+     /*display: flex;*/
+     /*align-items: center;*/
+    box-shadow: 5px 10px 0px 3px #F2F2F2;
+}
+figure .frioul img
+{
+    max-width: 100%;
+}
+figure figcaption.descrip_frioul
+{
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px;
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+}
+#activités_à_marseille figure.Calanques
+{
+    position: relative;
+    left: -360px;
+}
+figure .Calanques
+{
+    width: 310px;
+    height:430px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 10px 0px 3px #F2F2F2;
+}
+figure .Calanques img
+{
+    max-height: 100%;
+}
+figure figcaption.Calanques
+{
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px;
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: flex-start ;
+}
+#activités_à_marseille figure.la_garde
+{
+    position: relative;
+    left: -360px;
+}
+figure .la_garde
+{
+    width: 310px;
+    height:190px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline ;
+    box-shadow: 5px 10px 0px 3px #F2F2F2;
+}
+figure figcaption.descrip_la_garde
+{
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px;
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+}
+#activités_à_marseille figure.longchamp
+{
+    position: relative;
+    left: -720px;
+    top: 290px;
+}
+figure .longchamp
+{
+    width: 310px;
+    height:140px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 0px 3px #F2F2F2;
+}
+figure figcaption.descrip_longchamp
+{
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1rem;
+    height: 20px;
+    width: 262px;
+    box-shadow: 10px 10px 0px -2px #F2F2F2;
+    border: 4px solid white;
+    padding: 20px;
+    margin-top: -10px;
+}
+    
+footer
+{
+    background: #F2F2F2 repeat;
+    margin-top: 50px;
+    margin-left: -60px;
+    margin-right: -60px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 220px;
+}
+footer h2
+{
+    font-size: 1.3rem;
+}
+footer a
+{
+    text-decoration: none;
+    color: black;
+}
+#a_propos
+{
+    margin-left: 60px;
+}
+#assistance
+{
+    padding-right: 400px
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:320px)
+{
+    body
+    {
+        width: auto;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    #bloc_page
+    {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #logo img
+    {
+        width: auto;
+        display: block;
+    }
+    .menu_navigation
+    {
+        position: absolute;
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 70px; 
+    }
+    .menu_navigation ul
+    {
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .menu_navigation li 
+    {
+        border-bottom: 3px solid lightgrey;
+        border-top: none;
+        margin: 0;
+        height: auto;
+    }
+    .menu_navigation li a
+    {
+        width: auto;
+        padding: 0 25px;
+        margin: 0;
+        height: 50px;
+    }
+    .menu_navigation a:hover 
+    {
+        color: #0065FC;
+    }
+    .menu_navigation .register
+    {
+        position: absolute;
+        height: auto;
+        right: -10px;
+        top: -25px;
+        padding: 0;
+        border-bottom: none;
+    }
+    #titre_principal
+    {
+        margin: 0;
+    }
+    #titre_principal h1
+    {
+        padding: 0;
+        margin-top: 80px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    #titre_principal h2
+    {
+        text-align: center;
+    }
+    .icone_cote_gauche
+    {
+        margin: 20px 0;
+    }
+    input[type="search"]
+    {
+        width:230px;
+    }
+    .bouton_rechercher p
+    {
+        display: none;
+    }
+    .fas.fa-search
+    {
+        background: url(images/fond_bleu.png) repeat-x;
+        padding: 12px 3px;
+        border-radius: 10px 10px 10px 10px;
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        color: white;
+        margin-left: -10px;
+    }
+    .section
+    {
+        display: block;
+        width: auto;
+    }
+    #hebergements_marseille
+    {
+        order: 2;
+    }
+    #les_plus_populaires
+    {
+        order: 1;
+    }
+
+    footer
+    {
+        width: auto;
+        height: auto;
+        margin: 0;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #a_propos, #nos_hebergements, #assistance
+    {
+        margin: 0;
+    }
+}
+

@@ -28,11 +28,16 @@ header
 #titre_principal h2
 {
     font-size: 2em;
+    font-weight: normal;
 }
 #logo img
 {
     max-width: 120px;
     margin-top: 25px;
+}
+.menu_navigation
+{
+    height: 100%;
 }
 .menu_navigation ul
 {
@@ -177,7 +182,7 @@ nav li a:hover p
 }
 nav li p
 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 10px;
     padding: 10px;
 }
@@ -302,6 +307,7 @@ figure a
 {
     text-decoration: none; /*pour modifier l'apparence du lien de l'image*/
 }
+
 figure /* pour parametrer l'affichage des image(espace entre les vignettes par ex:)*/
 {
    display: inline-block; 
@@ -868,6 +874,7 @@ footer a
     figure .activités_marseille img
     {
         width: 100%;
+        object-fit: cover; /*pour que l'image prenne bien toute la taille du conteneur(vignette)*/
     }
     #activités_à_marseille .note_1
     {
@@ -1118,4 +1125,27 @@ footer a
     {
         width: 100%;
     }
-    aside 
+    
+
+
+
+
+
+@media screen (min-width:768px) and (max-width:1440px)
+{
+    #titre_principal 
+    {
+        margin-left: 20px;
+    }
+    
+    .menu_navigation 
+    {
+        height: 100%;
+    }
+    
+    .menu_navigation li
+    {
+        margin-right: 20px;
+    }
+        
+}

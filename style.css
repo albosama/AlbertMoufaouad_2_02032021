@@ -291,7 +291,7 @@ figure .vignette_auberge
 }
 .vignette_auberge img
 {
-    max-width: 100%;
+    width: 100%;
 }
 figure figcaption  /*pour parametrer description de l'image*/
 {
@@ -382,7 +382,7 @@ figure .populaires_1
 }
 figure .populaires img
 {
-    max-width: 100%;
+    width: 100%;
 }
 
 figure .populaires
@@ -442,6 +442,7 @@ figure .activités_marseille
 figure .activités_marseille img
 {
     max-height: 100%;
+    width: 100%;
 }
 #activités_à_marseille .note_1
 {
@@ -470,7 +471,7 @@ figure .le_fort
 }
 figure .le_fort img
 {
-    max-width: 100%;
+    width: 100%;
 }
 figure figcaption.descrip_fort
 {
@@ -505,7 +506,7 @@ figure .frioul
 }
 figure .frioul img
 {
-    max-width: 100%;
+    width: 100%;
 }
 figure figcaption.descrip_frioul
 {
@@ -647,13 +648,7 @@ footer a
 }
 
 
-
-
-
-
-
-
-@media screen and (max-width:375px)
+@media all and (max-device-width:480px)
 {
     body
     {
@@ -985,7 +980,7 @@ footer a
     }
 }
 
-@media screen (min-width:375px) and (max-width:768px)
+@media screen (min-width:480px) and (max-width:1440px)
 {
     body
     {
@@ -1011,10 +1006,6 @@ footer a
         position: relative;
         width: 100%;
         height: 100%;
-    }
-    .menu_navigation ul
-    {
-        
     }
     .menu_navigation li 
     {
@@ -1120,32 +1111,241 @@ footer a
         box-shadow: 0px 10px 20px 0px;
         color: grey;
     }
-
     aside
     {
         width: 100%;
     }
+}
     
-
-
-
-
-
-@media screen (min-width:768px) and (max-width:1440px)
+@media screen and (min-width:768px) and (max-width:1439px)
 {
     #titre_principal 
     {
         margin-left: 20px;
     }
-    
     .menu_navigation 
     {
         height: 100%;
+        padding-right: 20px;
     }
-    
     .menu_navigation li
     {
-        margin-right: 20px;
+        margin-left: 30px;
+        margin-right: 10px;
     }
-        
+    .Section_recherche
+    {
+        margin-left: 20px;
+    }
+    .icone_cote_gauche 
+    {
+        margin: 0;
+    }
+    .filtres
+    {
+        width: 100%;
+        margin-left: 20px;
+    }
+    .filtres ul
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 60px 0px 0px -55px;
+        padding: 0;
+        width: 100%;
+    } 
+    .filtres li
+    {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    #recherche_description 
+    {
+        margin-left: -50px;
+        margin-top: 20px;
+    }
+    
+    <------------------SECTION HEBERGEMENTS------------------>
+
+    section
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    article
+    {
+        order: -1;
+        flex: 1;
+        width: 100%;
+        margin: 0 20px;
+        height: auto;
+        padding: 25px;
+    }
+
+    #hebergements_marseille
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        /* margin-top: 0; */
+        width: 100%;
+    }
+    #hebergements_marseille figure
+    {
+        width: 100%;
+        height: 100%;
+    }
+    figure .vignette
+    {
+        width: auto;
+    }
+    figure figcaption
+    {
+        width: auto;
+    }
+    figure .vignette_auberge
+    {
+        width: auto;
+    }
+    .details h3
+    {
+        margin-bottom: 20px;
+    }
+    aside
+    {
+        width: 100%;
+        margin: 0;
+        margin-right: 20px;
+        height: 100%;
+        flex: 1;
+        padding: 25px;
+    }
+    #activité
+    {
+        width: auto;
+        padding: 0 20px;
+    }
+    #activité h2
+    {
+        padding-left: 20px;
+    }
+    #activités_à_marseille
+    {
+        width: 100%;
+        height: 1050px;
+        padding: 20px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    figure .activités_marseille img 
+    {
+        width: 100%
+    }
+    #activités_à_marseille figure
+    {
+        padding: 0;
+        width: 50%;
+    }
+    figure .activités_marseille
+    {
+        width: 100%;
+    }
+    #activités_à_marseille .note_1
+    {
+        width: auto;
+    }
+    #activités_à_marseille figure.le_fort
+    {
+        width: 45%;
+        position: relative;
+        left: 0;
+    }
+    figure .le_fort
+    {
+        width: 100%;
+    }
+    figure figcaption.descrip_fort
+    {
+        width: auto;
+    }
+    #activités_à_marseille figure.frioul
+    {
+        position: relative;
+        left: 400px;
+        top: -197px;
+        height: 150px;
+        width: 45%;
+    }
+    figure .frioul
+    {
+        width: 100%;
+    }
+    figure figcaption.descrip_frioul
+    {
+        width: auto;
+    }
+    #activités_à_marseille figure.Calanques
+    {
+        position: relative;
+        left: -365px;
+        margin-top: 40px;
+    }
+    figure .Calanques
+    {
+        width: 100%;
+    }
+    figure figcaption.Calanques
+    {
+        width: auto;
+    }
+    #activités_à_marseille figure.la_garde
+    {
+        position: relative;
+        left: 400px;
+        top: -485px;
+        width: 45%;
+    }
+    figure .la_garde
+    {
+        width: 100%;
+    }
+    figure figcaption.descrip_la_garde
+    {
+        width: auto;
+    }
+    #activités_à_marseille figure.longchamp 
+    {
+        position: relative;
+        left: 0px;
+        top: -195px;
+        width: 45%;
+    }
+    figure .longchamp
+    {
+        width: 100%;
+    }
+    figure figcaption.descrip_longchamp
+    {
+        width: auto;
+    }
+    footer 
+    {
+        width: auto;
+        padding: 30px 20px 0px 20px;
+        margin: 0;
+    }
+    footer h2 ,p
+    {
+        font-size: 1rem;
+    }
+    #a_propos
+    {
+        margin: 0;
+    }
+    #assistance
+    {
+        padding-right: 100px;
+    }
 }

@@ -413,14 +413,12 @@
     .fa-color3
     {
         color: black;
-        font-style: 'Raleway' sans-serif serif;
     }
-    #activité
+    #activite
     {
         margin-top: 50px;
-        font-family: 'Raleway', serif, sans-serif;
     }
-    #activités_à_marseille
+    #activites_a_marseille
     {
         display: flex;
     }
@@ -433,16 +431,16 @@
         flex-direction: column;
         height: 490px;
     }
-    #activités_à_marseille figure
+    #activites_a_marseille figure
     {
         margin: 0;
     }
-    #activités_à_marseille figure img
+    #activites_a_marseille figure img
     {
         width: 100%;
         object-fit: cover;
     }
-    figure .activités_marseille
+    figure .activites_marseille
     {
         width: 310px;
         height:430px;
@@ -453,11 +451,11 @@
         box-shadow: 0px 10px 20px 0px;
         color: grey;
     }
-    figure .activités_marseille img
+    figure .activites_marseille img
     {
         max-height: 100%;
     }
-    #activités_à_marseille .note_1
+    #activites_a_marseille .note_1
     {
         background-color: white;
         border-radius: 0px 0px 20px 20px;
@@ -833,14 +831,14 @@
         box-shadow: 0px 10px 20px 0px;
         color: grey;
     }
-    #activité
+    #activite
     {
         margin: 20px 0;
         padding: 10px 20px;
         height: auto;
         width: auto;
     }
-    #activités_à_marseille
+    #activites_a_marseille
     {
         flex-wrap: wrap;
 
@@ -850,24 +848,24 @@
         height: auto;
         width: auto;
     }
-    #activités_à_marseille figure
+    #activites_a_marseille figure
     {
         width: 100%;
         margin-bottom: 30px;
         padding: 0;
     }
-    figure .activités_marseille
+    figure .activites_marseille
     {
         padding: 0;
         width: 100%;
         height: 115px;
     }
-    figure .activités_marseille img
+    figure .activites_marseille img
     {
         width: 100%;
         object-fit: cover; /*pour que l'image prenne bien toute la taille du conteneur(vignette)*/
     }
-    #activités_à_marseille .note_1
+    #activites_a_marseille .note_1
     {
         width: auto;
     }
@@ -885,7 +883,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.frioul
+    #activites_a_marseille figure.frioul
     {
         position: static;
     }
@@ -903,7 +901,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.Calanques
+    #activites_a_marseille figure.Calanques
     {
         position: static;
         margin-top: 30px;
@@ -923,7 +921,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.la_garde
+    #activites_a_marseille figure.la_garde
     {
         position: static;
     }
@@ -941,7 +939,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.longchamp
+    #activites_a_marseille figure.longchamp
     {
         position: static;
     }
@@ -1219,16 +1217,16 @@
 
     /*<---------------SECTION ACTIVITé MARSEILLE--------------->*/
     
-    #activité
+    #activite
     {
         width: auto;
         margin: 0 20px;
     }
-    #activité h2
+    #activite h2
     {
         padding-left: 20px;
     }
-    #activités_à_marseille
+    #activites_a_marseille
     {
         width: 100%;
         height: 1050px;
@@ -1248,26 +1246,26 @@
         align-content: space-between;
     }
 
-    #activités_à_marseille figure
+    #activites_a_marseille figure
     {
         padding: 0;
         width: 50%;
     }
-    figure .activités_marseille
+    figure .activites_marseille
     {
         width: 100%;
     }
-    figure .activités_marseille img 
+    figure .activites_marseille img 
     {
         width: 100%;
         object-fit: cover;   
     }
-    #activités_à_marseille .note_1
+    #activites_a_marseille .note_1
     {
         width: auto;
     }
 
-    #activités_à_marseille figure.le_fort
+    #activites_a_marseille figure.le_fort
     {
         width: 45%;
     }
@@ -1279,7 +1277,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.frioul
+    #activites_a_marseille figure.frioul
     {
         width: 45%;
     }
@@ -1306,7 +1304,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.la_garde
+    #activites_a_marseille figure.la_garde
     {
         width: 45%;
     }
@@ -1318,7 +1316,7 @@
     {
         width: auto;
     }
-    #activités_à_marseille figure.longchamp 
+    #activites_a_marseille figure.longchamp 
     {
         width: 45%;
     }

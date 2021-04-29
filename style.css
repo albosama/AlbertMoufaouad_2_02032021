@@ -6,7 +6,7 @@
     {
         font-family: 'Raleway', Arial, sans-serif;
         margin:0 auto;
-        max-width: 1400px;
+        max-width: 1440px;
     }
     #bloc_page
     {
@@ -77,10 +77,13 @@
         color: #0065FC;
         font-weight: bold;
     }
+    
+    .Section_recherche
+    {
+        margin: 0 20px;
+    }
     .icone_cote_gauche
     {
-        margin-top: 10px;
-        margin-left: 10px;
         display: flex;
         border-radius: 5px;
     }
@@ -98,17 +101,19 @@
     {
         text-decoration: none;
     }
-    .bouton_rechercher p/*personnalisation du bouton rechercher*/
+    .bouton_rechercher span/*personnalisation du bouton rechercher*/
     {
         font-size: 17px;
         width: 125px;
-        background: url(images/fond_bleu.png) repeat-x;
+        background: #0065FC repeat-x;
         color: white;
         text-align: center;
         text-decoration: none;
         padding: 15px 3px;
         margin: 0;
         border-radius: 0px 10px 10px 0px ;  
+        display: flex;
+        justify-content: center;
     }
     input[type="search"] /*pour changr les parametres de la barre de recherche*/
     {
@@ -127,28 +132,34 @@
     }
     .filtres 
     {
-        display: flex;
+        max-width: 100%;
         margin-top: 20px;
-        margin-left: 15px;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
     }
     .filtres h3 
     {
-        height: 20px; /*pour changer la hauteur (de la marge)*/
         font-size: 1.2rem;
+        margin: 0px 30px 10px 0px;
     }
     .filtres ul
     {
         list-style-type: none;
         display: flex;
-        margin: 7px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
     }
     .filtres li
     {
-        margin-right: 20px;
+        margin: 10px 30px 10px 0px;
         display: flex;
         border: 2px solid #F2F2F2;
         border-radius: 50px;
     }
+
     .fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
     {
         font-size:1rem;
@@ -177,7 +188,7 @@
     }
     nav li p
     {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 0 10px;
         padding: 10px;
     }
@@ -189,14 +200,21 @@
     }
     #recherche_description
     {
-        margin-left: -60px; /*pour changer la marge à gauche de l'icone info*/
-        margin-top: 50px;
+        margin: 0 20px;
     }
+
+    #recherche_description div
+    {
+        display: flex;
+        align-items: baseline;
+    }
+
     #recherche_description .fas.fa-info
     {
         padding: 5px 10px 5px 10px;
         border: 2px solid #F2F2F2;
         border-radius: 50%;
+        margin: 20px 20px 0px 0px;
     }
     .fas.fas.fa-info
     {
@@ -209,103 +227,154 @@
         margin-left: 40px;
     }
 
-    section
+    section, article, footer
+    {
+        padding: 20px 0;
+    }
+
+    .main_bloc
     {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 20px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
-    section h2
+    .main_bloc h2
     {
+        font-size: 1.4rem;
         font-family: "Raleway",serif,sans-serif;
         font-weight:bold;
+        margin: 0;
     }
     section a
     {
         list-style-type: none;  
     }
-    strong
+
+    article, aside
+    {
+        padding: 25px 30px;
+        border-radius: 20px;
+    }
+    
+    a
     {
         color: black;
+        text-decoration: none;
+        cursor:pointer;
     }
-    article
+    .hebergements .vignette, aside .vignette, .activites .vignette
     {
-        background: #F2F2F2 repeat;
-        border-radius: 20px;
-        margin-right: 50px;
-        padding: 10px 40px 10px 40px;
-        height: 575px;
-        width: 845px;
+        height: 200px;
+        box-shadow: 0px 10px 20px 0px;
+        color: grey;
     }
-    article h2 .details h3
+
+    .hebergements .vignette_image
+    {
+        height: 115px;
+    }
+
+    .hebergements .vignette_image img, .activites .vignette_image img
+    {
+        border-radius: 10px 10px 0 0;
+    }
+    .hebergements .legende_vignette
+    {
+        padding: 0 10px;
+    }
+    .vignette
+    {
+        background-color: white;
+        border-radius: 20px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .vignette_image
+    {
+        background-color: white;
+        border-radius: 0px 20px 20px 0px;
+        border: 1px solid white;
+    }
+
+    .vignette_image img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .legende_vignette
     {
         display: flex;
         flex-direction: column;
-    }
-    #hebergements_marseille
-    {
-        display: grid;
-        grid-template-columns: repeat(3, 250px);
-        grid-gap: 40px;
-        width: 845px;
-    }
-    #hebergements_marseille figure
-    {
-        width: 260px;
-        height: 178px;
-        margin: 0;
-    }
-    figure .vignette img
-    {
-        width: 100%; /*pour que limage (reste centrer) ne depasse jamais la taille de son conteneur*/
-    }
-    figure .vignette
-    {
-        width: 255px; /*pour changer la largeur de l'image*/ 
-        height: 115px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        border-radius: 20px 20px 0px 0px;
-        border: 4px solid white;
-    }
-    .vignette figcaption, .fas.fa-star
-    {
-        margin: 0;
-        padding-top: 10px;
-    }
-    figure .vignette_auberge
-    {
-        width: 255px;
-        height: 115px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        border-radius: 20px 20px 0px 0px;
-        border: 4px solid white;
-    }
-    .vignette_auberge img
-    {
-        width: 100%;
-    }
-    figure figcaption  /*pour parametrer description de l'image*/
-    {
-        padding-left: 20px;
-        background-color: white;
-        border-radius: 0px 0px 20px 20px;
+        justify-content: space-around;
         font-size: 0.9rem;
-        height: 70px;
-        width: 243px;
-        color: grey;
-    }
-    figure a 
-    {
-        text-decoration: none; /*pour modifier l'apparence du lien de l'image*/
+        font-family: 'Raleway';
+        flex: 1;
     }
 
-    figure /* pour parametrer l'affichage des image(espace entre les vignettes par ex:)*/
+    .legende_vignette strong
     {
-    display: inline-block; 
+        font-size: 1rem;
+        display: block;
+        color: black;
+    }
+
+    .legende_vignette p
+    {
+        margin: 0;
+        display: flex;
+    }
+
+    .vignette i
+    {
+        font-size: 0.8rem;
+        letter-spacing: -3px;
+    }
+
+    aside
+    {
+        background: #F2F2F2 repeat;
+    }
+
+    aside .tittle
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .les_plus_populaires
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    aside .vignette
+    {
+        height: 140px;
+        flex-direction: row;
+    }
+
+    .les_plus_populaires .vignette_image
+    {
+        max-width: 40%;
+    }
+
+    .les_plus_populaires .vignette_image img
+    {
+        border-radius: 20px 0px 0px 20px;
+        border: 1px solid white;
+    }
+
+    .les_plus_populaires .legende_vignette, .activites .legende_vignette
+    {
+        padding: 0 20px;
     }
 
     .details
@@ -317,306 +386,303 @@
         margin: 0;
         padding: 0;
         width: 115px;
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-family: 'Raleway', sans-serif, serif;
     }
 
-    aside
-    {
-        background: #F2F2F2 repeat;
-        border-radius: 20px;
-        padding: 10px 40px;
-        width: 340px;
-        height: 576px;
-    }
-    aside h2 .icone_stats
-    {
-        width: 20px;
-    }
-    .icone_stats
-    {
-        position: relative;
-        top: 3px;
-        right: -100px;
-    }
-    #les_plus_populaires
-    {
-        display: flex;
-        flex-direction: column;
-        width: 340px;
-        height: 500px;
-        justify-content: space-between;
-    }
-    #les_plus_populaires figure
-    {
-        height: 150px;
-        margin: 0; 
-        width: 340px; 
-    }
-    #les_plus_populaires figcaption /*pour gerer les parametres de la description image*/
-    {
-        top: -143px;
-        left: 140px;
-        border-radius: 0px 20px 20px 0px;
-        height: 133px;
-        width: 180px;
-        position: relative; /*pour que la description soit positionnée sur le coté de l'image*/
-        padding-top: 10px; 
-    }
-
-    figure .populaires_1
-    {
-        width: 135px;
-        height: 135px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px 0px 0px 20px;
-        border: 4px solid white;
-    }
-    figure .populaires img
-    {
-        width: 100%;
-    }
-
-    figure .populaires
-    {
-        width: 135px;
-        height: 135px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px 0px 0px 20px;
-        border: 4px solid white;
-    }
-    figure .populaires_1 img
-    {
-        max-height: 100%; 
-    }
-    #les_plus_populaires .populaires_1 .populaires strong
-    {
-        display: flex;
-    }
-    #les_plus_populaires figure figcaption .fas.fa-star
-    {
-        margin: 0;
-        padding-top: 55px;
-    }
     .fa-color3
     {
         color: black;
+    }
+
+    section.activites
+    {
+        padding: 0 20px;
+        max-width: 100%;
     }
     #activite
     {
         margin-top: 50px;
     }
-    #activites_a_marseille
+    .vignette_activites
     {
-        display: flex;
-    }
-    .group_vignette
-    {
-        width: 50%;
+        margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+    }
+
+    .group_vignette
+    {
+        display: flex;
         flex-direction: column;
-        height: 490px;
-    }
-    #activites_a_marseille figure
-    {
-        margin: 0;
-    }
-    #activites_a_marseille figure img
-    {
-        width: 100%;
-        object-fit: cover;
-    }
-    figure .activites_marseille
-    {
-        width: 310px;
-        height:430px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    figure .activites_marseille img
-    {
-        max-height: 100%;
-    }
-    #activites_a_marseille .note_1
-    {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px; /*pour changer la largeur de la banniere description*/
-        box-shadow: 0px 10px 20px 0px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-    }
-    figure .le_fort
-    {
-        width: 310px;
-        height:190px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    figure .le_fort img
-    {
         width: 100%;
     }
-    figure figcaption.descrip_fort
+    
+    .activites .vignette_image
     {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-        box-shadow: 0px 10px 20px 0px;
+        height: calc(100% - 3rem); 
+        border: none;
     }
-    figure .frioul
+
+    .activites .vignette
     {
-        width: 310px;
-        height:140px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
+        padding: 0;
+        margin-bottom: 30px;   
     }
-    figure .frioul img
+    
+    .activites .legende_vignette
     {
-        width: 100%;
-    }
-    figure figcaption.descrip_frioul
-    {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px;
-        box-shadow: 0px 10px 20px 0px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-    }
-    figure .Calanques
-    {
-        width: 310px;
-        height:430px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
+        height: 40px;
+        padding-left: 15px;
         display: flex;
-        justify-content: center;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 0.8rem;
+        border-radius: 0 0 10px 10px;
     }
-    figure .Calanques img
+
+    .activites .vignette:hover
     {
-        max-height: 100%;
-        object-fit: cover;
-    }
-    figure figcaption.Calanques
-    {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px;
         box-shadow: 0px 10px 20px 0px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-        display: flex;
-        justify-content: flex-start ;
     }
-    figure .la_garde
-    {
-        width: 310px;
-        height:190px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: baseline ;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    figure figcaption.descrip_la_garde
-    {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px;
-        box-shadow: 0px 10px 20px 0px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-    }
-    figure .longchamp
-    {
-        width: 310px;
-        height:140px;
-        overflow: hidden;
-        border-radius: 20px 20px 0px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    figure figcaption.descrip_longchamp
-    {
-        border-radius: 0px 0px 20px 20px;
-        font-size: 1rem;
-        height: 20px;
-        width: 262px;
-        box-shadow: 0px 10px 20px 0px;
-        border: 4px solid white;
-        padding: 20px;
-        margin-top: -10px;
-    }
-        
+
     footer
     {
         background: #F2F2F2 repeat;
-        margin-top: 50px;
-        margin-left: -60px;
-        margin-right: -60px;
-        padding-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        height: 220px;
+        height: 100%;
     }
     footer h2
     {
         font-size: 1.3rem;
     }
-    footer a
+    
+    footer div
     {
-        text-decoration: none;
-        color: black;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 20px;    
     }
-    #a_propos
+
+    .credits p
     {
-        margin-left: 60px;
+       margin: 8px 0; 
     }
-    #assistance
+
+@media screen and (max-width:767px)
+{
+    
+    .main_bloc aside
     {
-        padding-right: 400px
+        order: 1;
+    }
+    .main_bloc article
+    {
+        order: 2;
+    }
+
+    .vignette_hebergements_marseille
+    {
+        margin-top: 30px;
+    }
+}
+    
+@media screen and (min-width:768px)
+{
+    #titre_principal 
+    {
+        margin-left: 20px;
+    }
+    .menu_navigation 
+    {
+        height: 100%;
+        padding-right: 20px;
+    }
+    .menu_navigation li
+    {
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+    .Section_recherche
+    {
+        margin-left: 20px;
+    }
+    .icone_cote_gauche 
+    {
+        margin: 0;
+    }
+    .filtres
+    {
+        max-width: 100%;
+        margin: 20px 20px 0px 20px;
+    }
+    .filtres ul
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        width: 100%;
+    } 
+    .filtres li
+    {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    /*<------------------BLOC HEBERGEMENTS------------------>*/
+
+    .main_bloc
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+    article
+    {
+        order: -1;
+        flex: 1;
+        background: #F2F2F2 repeat;
     }
 
 
+    .vignette_hebergements_marseille
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
 
+    .hebergements .vignette
+    {
+        width: 250px;
+        margin: 15px 0;
+    }
+    .vignette
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    aside .vignette
+    {
+        margin-bottom: 20px;
+    }
+    
+    aside
+    {
+        max-width: 420px;
+        margin-left: 30px;
+        height: 100%;
+        flex: 1;
+    }
+
+    /*<---------------SECTION ACTIVITé MARSEILLE--------------->*/
+    
+    section.activites
+    {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+    #activite h2
+    {
+        padding-left: 20px;
+    }
+
+    .group_vignette 
+    {
+        height: 450px;
+        flex-wrap: wrap;
+        flex: 1 100%;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    .group_vignette:nth-child(1), .group_vignette:nth-child(2)
+    {
+        margin-bottom: 30px;
+    }
+
+    .vignette.complete
+    {
+        height:100%;
+    }
+
+    .activites .vignette
+    {
+        max-width: calc(50% - 2.5rem / 2);
+        margin: 0;
+    }
+
+    .activites .vignette_image
+    {
+        flex: 1;
+    }
+    .activites .legende_vignette
+    {
+        max-height: 50px;
+    }
+
+    .vignette.moyenne
+    {
+        height: 235px;
+    }
+
+    .activites_marseille .vignette_moyenne
+    {
+        width: 100%;
+    }
+
+    .vignette.petite
+    {
+        height: 160px;
+    }
+    .activites_marseille img 
+    {
+        width: 100%;
+        object-fit: cover;   
+    }
+
+    footer 
+    {
+        max-width: 100%;
+        padding: 30px 20px 20px 30px;
+        margin: 0;
+    }
+
+    footer div
+    {
+        flex-direction: row;
+        padding: 0;
+    }
+    .credits
+    {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .credits p
+    {
+        padding-bottom: 10px;
+        margin: 0;    
+    }
+}
+
+
+@media screen and (min-width: 1200px) 
+{
+
+    .group_vignette
+    {
+        flex: 1;
+    }
+
+    .group_vignette:nth-child(2)
+    {
+        margin-left: 40px;
+    }
+}
 
 
 @media all and (max-width:480px)
@@ -700,8 +766,7 @@
     }
     .Section_recherche
     {
-        padding: 0px 0px 0px 30px;
-        width: auto;
+        max-width: 100%;
     }
     .fas.fa-map-marker-alt
     {
@@ -718,13 +783,13 @@
         width:235px;
         height: 50px;
     }
-    .bouton_rechercher p
+    .bouton_rechercher span
     {
         display: none;
     }
     .fas.fa-search
     {
-        background: url(images/fond_bleu.png) repeat-x;
+        background: #0065FC repeat-x;
         padding: 17px 10px;
         border-radius: 10px;
         display: flex;
@@ -733,606 +798,5 @@
         color: white;
         margin-left: -10px;
     }
-    .filtres
-    {
-        margin-left: 30px;
-    }
-    .filtres ul
-    {
-        flex-wrap: wrap;
-        margin: 60px 0px 0px -55px;
-        padding: 0;
-    }
-    .filtres li
-    {
-        margin-bottom: 20px;
-        align-items: center;
-    }
-    nav li p
-    {
-        margin: 0;
-        font-size: 1rem;
-    }
-    #recherche_description
-    {
-        margin-left: -55px;
-        margin-top: 20px;
-    }
-    #recherche_description p
-    {
-        padding: 10px;
-    }
-    section
-    {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    section aside
-    {
-        order: 1;
-        border-radius: 0px;
-        margin-bottom: 20px;
-        padding: 10px 20px;
-    }
-    section article
-    {
-        order: 2;
-        border-radius: 0px;
-        margin: 0;
-        padding: 15px 20px;
-        height: auto;
-        background-color: white;
-    }
-    #hebergements_marseille
-    {
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    #hebergements_marseille figure
-    {
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-    #hebergements_marseille .vignette
-    {
-        width: auto;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    #hebergements_marseille .vignette_auberge
-    {
-        width: auto;
-    }
-    #hebergements_marseille figcaption
-    {
-        width: auto;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    #activite
-    {
-        margin: 20px 0;
-        padding: 10px 20px;
-        height: auto;
-        width: auto;
-    }
-    #activites_a_marseille
-    {
-        flex-wrap: wrap;
-
-    }
-    .group_vignette
-    {
-        height: auto;
-        width: auto;
-    }
-    #activites_a_marseille figure
-    {
-        width: 100%;
-        margin-bottom: 30px;
-        padding: 0;
-    }
-    figure .activites_marseille
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .activites_marseille img
-    {
-        width: 100%;
-        object-fit: cover; /*pour que l'image prenne bien toute la taille du conteneur(vignette)*/
-    }
-    #activites_a_marseille .note_1
-    {
-        width: auto;
-    }
-    figure .le_fort
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .le_fort img
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_fort
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.frioul
-    {
-        position: static;
-    }
-    figure .frioul
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .frioul img
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_frioul
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.Calanques
-    {
-        position: static;
-        margin-top: 30px;
-    }
-    figure .Calanques
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .Calanques img
-    {
-        width: 100%;
-        object-fit: cover;
-    }
-    figure figcaption.Calanques
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.la_garde
-    {
-        position: static;
-    }
-    figure .la_garde
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .la_garde img
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_la_garde
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.longchamp
-    {
-        position: static;
-    }
-    figure .longchamp
-    {
-        padding: 0;
-        width: 100%;
-        height: 115px;
-    }
-    figure .longchamp img
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_longchamp
-    {
-        width: auto;
-    }
-    footer
-    {
-        width: auto;
-        height: auto;
-        margin: 0;
-        padding: 10px 20px;
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-    #a_propos, #nos_hebergements, #assistance
-    {
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media screen (min-width:480px) and (max-width:768px)
-{
-    body
-    {
-        width: auto;
-        margin: 0 auto;
-        padding: 0;
-    }
-    #bloc_page
-    {
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    #logo img
-    {
-        width: auto;
-        display: block;
-    }
-    .menu_navigation
-    {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    .menu_navigation li 
-    {
-        margin-left: 50px;
-        margin-right: 0;
-    }
-    #titre_principal
-    {
-        margin-left: 20px;
-    }
-    #titre_principal h1
-    {
-        padding: 0;
-        margin-top: 25px;
-        font-size: 1.4rem;
-    }
-    #titre_principal h2
-    {
-        font-size: 17px;
-    }
-    .icone_cote_gauche
-    {
-        margin-left: 20px;
-    }
-    .fas.fa-map-marker-alt
-    {
-        padding: 10px;
-        width: 35px;
-        height: 25px;
-    }
-    input[type="search"] 
-    {
-        height: 45px;
-    }
-    .bouton_rechercher p
-    {
-      padding: 13px 0;  
-    }
-    .filtres 
-    {
-        margin-left: 20px;
-    }  
-    .filtres ul
-    {
-        flex-wrap: wrap;
-        margin: 60px 0px 0px -55px;
-        padding: 0;
-    } 
-    .filtres li
-    {
-        margin-bottom: 20px;
-        align-items: center;
-    }
-    nav li p
-    {
-        margin: 0;
-        font-size: 1rem;
-    }
-    #recherche_description
-    {
-        margin-left: -55px;
-        margin-top: 20px;
-    }
-    section
-    {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    article
-    {
-        margin: 0;
-        margin-bottom: 30px;
-        height: auto;
-        padding: 10px 50px;
-        width: auto;
-    }
-    #hebergements_marseille
-    {
-        width: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    #hebergements_marseille figure
-    {
-        height: auto;
-        margin-bottom: 30px;
-    }
-    #hebergements_marseille .vignette
-    {
-        width: auto;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    #hebergements_marseille .vignette_auberge
-    {
-        width: auto;
-    }
-    #hebergements_marseille figcaption
-    {
-        width: auto;
-        box-shadow: 0px 10px 20px 0px;
-        color: grey;
-    }
-    aside
-    {
-        width: 100%;
-    }
     
-}
-    
-@media screen and (min-width:768px) and (max-width:1439px)
-{
-    #titre_principal 
-    {
-        margin-left: 20px;
-    }
-    .menu_navigation 
-    {
-        height: 100%;
-        padding-right: 20px;
-    }
-    .menu_navigation li
-    {
-        margin-left: 30px;
-        margin-right: 10px;
-    }
-    .Section_recherche
-    {
-        margin-left: 20px;
-    }
-    .icone_cote_gauche 
-    {
-        margin: 0;
-    }
-    .filtres
-    {
-        width: 100%;
-        margin-left: 20px;
-    }
-    .filtres ul
-    {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 60px 0px 0px -55px;
-        padding: 0;
-        width: 100%;
-    } 
-    .filtres li
-    {
-        margin-bottom: 20px;
-        align-items: center;
-    }
-    #recherche_description 
-    {
-        margin-left: -50px;
-        margin-top: 20px;
-    }
-    
-    /*<------------------SECTION HEBERGEMENTS------------------>*/
-
-    section
-    {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    article
-    {
-        order: -1;
-        flex: 1;
-        width: 100%;
-        margin: 0 20px;
-        height: auto;
-        padding: 25px;
-    }
-
-    #hebergements_marseille
-    {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 100%;
-    }
-    #hebergements_marseille figure
-    {
-        width: 100%;
-        height: 100%;
-    }
-    figure .vignette
-    {
-        width: auto;
-    }
-    figure figcaption
-    {
-        width: auto;
-    }
-    figure .vignette_auberge
-    {
-        width: auto;
-    }
-    .details h3
-    {
-        margin-bottom: 20px;
-    }
-    aside
-    {
-        width: 100%;
-        margin: 0;
-        margin-right: 20px;
-        height: 100%;
-        flex: 1;
-        padding: 25px;
-    }
-
-    /*<---------------SECTION ACTIVITé MARSEILLE--------------->*/
-    
-    #activite
-    {
-        width: auto;
-        margin: 0 20px;
-    }
-    #activite h2
-    {
-        padding-left: 20px;
-    }
-    #activites_a_marseille
-    {
-        width: 100%;
-        height: 1050px;
-        padding: 20px 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
-    .group_vignette 
-    {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        flex-direction: column;
-        height: 490px;
-        align-content: space-between;
-    }
-
-    #activites_a_marseille figure
-    {
-        padding: 0;
-        width: 50%;
-    }
-    figure .activites_marseille
-    {
-        width: 100%;
-    }
-    figure .activites_marseille img 
-    {
-        width: 100%;
-        object-fit: cover;   
-    }
-    #activites_a_marseille .note_1
-    {
-        width: auto;
-    }
-
-    #activites_a_marseille figure.le_fort
-    {
-        width: 45%;
-    }
-    figure .le_fort
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_fort
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.frioul
-    {
-        width: 45%;
-    }
-    figure .frioul
-    {
-        width: 100%;
-    }
-    figure .frioul img 
-    {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    figure figcaption.descrip_frioul
-    {
-        width: auto;
-    }
-
-    figure .Calanques
-    {
-        width: 100%;
-    }
-    figure figcaption.Calanques
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.la_garde
-    {
-        width: 45%;
-    }
-    figure .la_garde
-    {
-        width: 100%;
-    }
-    figure figcaption.descrip_la_garde
-    {
-        width: auto;
-    }
-    #activites_a_marseille figure.longchamp 
-    {
-        width: 45%;
-    }
-    figure .longchamp
-    {
-        width: 100%;
-    }
-    figure .longchamp img 
-    {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    figure figcaption.descrip_longchamp
-    {
-        width: auto;
-    }
-    footer 
-    {
-        width: auto;
-        padding: 30px 20px 0px 20px;
-        margin: 0;
-    }
-    footer h2 ,p
-    {
-        font-size: 1rem;
-    }
-    #a_propos
-    {
-        margin: 0;
-    }
-    #assistance
-    {
-        padding-right: 100px;
-    }
 }

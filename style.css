@@ -80,7 +80,7 @@
     
     .Section_recherche
     {
-        margin: 0 20px;
+        margin: 10px 20px;
     }
     .icone_cote_gauche
     {
@@ -154,7 +154,7 @@
     }
     .filtres li
     {
-        margin: 10px 30px 10px 0px;
+        margin: 10px 20px 10px 0px;
         display: flex;
         align-items: center;
         border: 2px solid #F2F2F2;
@@ -514,7 +514,7 @@
     .filtres
     {
         max-width: 100%;
-        margin: 20px 20px 0px 20px;
+        margin: 0 20px;
     }
     .filtres ul
     {
@@ -525,8 +525,8 @@
     } 
     .filtres li
     {
-        margin-bottom: 20px;
         align-items: center;
+        margin: 10px 30px 15px 0px;
     }
     
     /*<------------------BLOC HEBERGEMENTS------------------>*/

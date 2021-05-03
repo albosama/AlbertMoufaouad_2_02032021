@@ -156,6 +156,7 @@
     {
         margin: 10px 30px 10px 0px;
         display: flex;
+        align-items: center;
         border: 2px solid #F2F2F2;
         border-radius: 50px;
     }
@@ -169,7 +170,7 @@
     }
     .fa-color
     {
-        color: dodgerblue;
+        color: #0065FC;
     }
     .fa-color2
     {
@@ -190,7 +191,7 @@
     {
         font-size: 1rem;
         margin: 0 10px;
-        padding: 10px;
+        padding: 5px;
     }
     li img
     {
@@ -471,7 +472,10 @@
 
 @media screen and (max-width:767px)
 {
-    
+    article, aside
+    {
+        padding: 25px 20px;
+    }
     .main_bloc aside
     {
         order: 1;
@@ -479,8 +483,8 @@
     .main_bloc article
     {
         order: 2;
+        width: 100%;
     }
-
     .vignette_hebergements_marseille
     {
         margin-top: 30px;
@@ -502,10 +506,6 @@
     {
         margin-left: 30px;
         margin-right: 10px;
-    }
-    .Section_recherche
-    {
-        margin-left: 20px;
     }
     .icone_cote_gauche 
     {

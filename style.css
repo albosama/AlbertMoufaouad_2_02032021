@@ -360,11 +360,13 @@
     {
         height: 140px;
         flex-direction: row;
+        width: 100%;
     }
 
     .les_plus_populaires .vignette_image
     {
         max-width: 40%;
+        width: 100%;
     }
 
     .les_plus_populaires .vignette_image img
